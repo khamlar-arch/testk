@@ -60,7 +60,7 @@ class Addons {
 			return file;
 		}
 
-		var rawFile = Json5.parse(sys.io.File.getContent(path));
+		var rawFile = Json5.parse(PsychFile.getContent(path));
 		for (property in Reflect.fields(rawFile)) {
 			// ??????? ok i guess no `Reflect.hasField()` for you
 			if (!Reflect.fields(file).contains(property)) continue;
