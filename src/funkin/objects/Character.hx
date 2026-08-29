@@ -49,7 +49,7 @@ class Character extends FunkinSprite {
 		super(x, y);
 
 		var path:String = Paths.get('characters/$name.json');
-		if (!PsychFileSystem.exists(path)) {
+		if (!FileSystem.exists(path)) {
 			trace('character path "$path" doesn\'t exist');
 			name = default_name;
 		}
@@ -185,9 +185,9 @@ class Character extends FunkinSprite {
 
 	static function getFile(path:String):CharacterFile {
 		var file:CharacterFile = createDummyFile();
-		if (!PsychFileSystem.exists(path)) return file;
+		if (!FileSystem.exists(path)) return file;
 		
-		var data = Json5.parse(PsychFile.getContent(path));
+		var data = Json5.parse(File.getContent(path));
 		for (property in Reflect.fields(data)) {
 			if (!Reflect.hasField(file, property)) continue;
 			Reflect.setField(file, property, Reflect.field(data, property));
