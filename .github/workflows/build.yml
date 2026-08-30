@@ -47,7 +47,7 @@ jobs:
           haxelib install flixel 5.5.0 --quiet
           haxelib git hscript-iris https://github.com/crowplexus/hscript-iris --quiet
           haxelib install flixel-animate --quiet
-          haxelib git moonchart https://github.com/MaybeMaru/moonchart --quiet
+          haxelib install moonchart --quiet
           haxelib install hxvlc 1.9.2 --quiet
           haxelib git hxcpp https://github.com/kittycathy233/hxcpp --quiet
           haxelib install hxdiscord_rpc 1.2.4 --quiet
