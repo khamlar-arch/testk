@@ -12,7 +12,7 @@ import funkin.shaders.TileLine;
 	public var make:Float->FlxSpriteGroup->Float;
 }
 
-class ResultsScreenState extends flixel.FlxSubState {
+class ResultsScreenState extends FunkinSubstate {
 	public static var lastPlay:PlayData;
 	
 	var accepted:Bool = false;
